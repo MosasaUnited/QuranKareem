@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../core/constants/constant.dart';
 import '../../../../settings/presentation/views/screens/settings.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -64,9 +67,9 @@ class MyDrawer extends StatelessWidget {
               'Rate',
             ),
             onTap: () async {
-              if (!await launchUrl(quranAppurl,
+              if (!await launchUrl(quranAppUrl,
                   mode: LaunchMode.externalApplication)) {
-                throw 'Could not launch $quranAppurl';
+                throw 'Could not launch $quranAppUrl';
               }
             },
           ),

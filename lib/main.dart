@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quraan_app/core/constants/constant.dart';
 
-import 'features/splash/presentation/views/screens/splash_view.dart';
+import 'features/home/presentation/views/screens/index.dart';
 
 void main() {
   runApp(const QuranKareem());
@@ -50,7 +50,7 @@ class _QuranKareemState extends State<QuranKareem> {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const SplashView(),
+      home: const IndexPage(),
     );
   }
 }
