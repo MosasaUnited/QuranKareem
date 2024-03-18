@@ -1,3 +1,7 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
+
 List<Map> arabicName = [
   {"surah": "1", "name": "الفاتحة"},
   {"surah": "2", "name": "البقرة"},
@@ -114,3 +118,16 @@ List<Map> arabicName = [
   {"surah": "113", "name": "الفلق"},
   {"surah": "114", "name": "الناس"}
 ];
+
+List arabic = [];
+List malayalam = [];
+List quran = [];
+
+readJson() async {
+  final String response =
+      await rootBundle.loadString('assets/json/hafs_smart_v8.json');
+  final data = json.decode(response);
+  arabic = data['quran'];
+  malayalam = data['malayalam'];
+  return quran = [arabic, malayalam];
+}

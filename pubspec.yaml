@@ -69,6 +69,8 @@ flutter:
   assets:
      - assets/images/
      - assets/icons/
+     - assets/fonts/
+     - assets/json/
 
 
 flutter_icons:
@@ -90,14 +92,10 @@ flutter_icons:
   fonts:
      - family: quran
        fonts:
-        - asset: assets/fonts/uthmanic_hafs_v20.ttf
+        - asset: assets/fonts/HafsSmart_08.ttf
 
-     - family: my_font_quraan
+     - family: me_quran
        fonts:
-        - asset: assets/fonts/My-Font-Quraan.ttf
-
-     - family: malayalam
-       fonts:
-         - asset: assets/fonts/ML-TTKarthika Normal.ttf
+        - asset: assets/fonts/me_quran.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
