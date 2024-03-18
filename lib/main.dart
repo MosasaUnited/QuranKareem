@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'features/splash/presentation/views/splash_view.dart';
+import 'features/splash/presentation/views/screens/splash_view.dart';
 
 void main() {
   runApp(const QuranKareem());
