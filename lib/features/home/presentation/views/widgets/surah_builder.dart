@@ -14,8 +14,8 @@ final class SurahBuilder extends StatefulWidget {
   final sura;
   final arabic;
   final suraName;
-  final int ayah;
-  const SurahBuilder(
+  int ayah;
+  SurahBuilder(
       {super.key, this.sura, this.arabic, this.suraName, required this.ayah});
 
   @override
@@ -47,6 +47,8 @@ class _SurahBuilderState extends State<SurahBuilder> {
     await prefs.setInt('ayah', ayah);
   }
 
+  int previousVerses = 0;
+
   Row verseBuilder(int index, previousVerses) {
     return Row(
       children: [
@@ -76,7 +78,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
 
   SafeArea SingleSuraBuilder(LenghtOfSura) {
     String fullSura = '';
-    double previousVerses = 0;
+    int previousVerses = 0;
     if (widget.sura + 1 != 1) {
       for (int i = widget.sura - 1; i >= 0; i--) {
         previousVerses = previousVerses + numberOfVerses[i];
@@ -167,7 +169,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
-                                fullSura, //mushaf mode
+                                fullSura,
                                 textDirection: TextDirection.rtl,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(

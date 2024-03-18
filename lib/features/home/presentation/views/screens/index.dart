@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/constant.dart';
 import '../../../../../core/constants/sura_name.dart';
-import '../../../../../main.dart';
-import '../../../../splash/presentation/views/widgets/surah_builder.dart';
 import '../widgets/arabic_sura_number.dart';
 import '../widgets/mydrawer.dart';
+import '../widgets/surah_builder.dart';
 
 class IndexPage extends StatefulWidget {
   const IndexPage({super.key});
