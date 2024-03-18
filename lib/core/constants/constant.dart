@@ -1,11 +1,20 @@
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+int bookmarkedAyah = 1;
+int bookmarkedSura = 1;
+bool fabIsClicked = true;
+
+final ItemScrollController itemScrollController = ItemScrollController();
+final ItemPositionsListener itemPositionsListener =
+    ItemPositionsListener.create();
 
 String arabicFonts = 'quran';
 
 double arabicFontSize = 28;
 double mushufFontSize = 40;
 
-Uri quranAppUrl = Uri.parse('www.google.com');
+Uri quranAppUrl = Uri.parse('https://github.com/MosasaUnited');
 
 Future saveSetting() async {
   final prefs = await SharedPreferences.getInstance();
@@ -21,5 +30,23 @@ Future getSettings() async {
   } catch (_) {
     arabicFontSize = 28;
     mushufFontSize = 40;
+  }
+}
+
+saveBookMark(surah, ayah) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setInt("surah", surah);
+  await prefs.setInt("ayah", ayah);
+}
+
+readBookmark() async {
+  print("read book mark called");
+  final prefs = await SharedPreferences.getInstance();
+  try {
+    bookmarkedAyah = prefs.getInt('ayah')!;
+    bookmarkedSura = prefs.getInt('surah')!;
+    return true;
+  } catch (e) {
+    return false;
   }
 }

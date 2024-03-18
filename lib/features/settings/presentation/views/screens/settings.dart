@@ -72,6 +72,31 @@ class _SettingsState extends State<Settings> {
                         fontFamily: 'quran', fontSize: mushufFontSize),
                     textDirection: TextDirection.rtl,
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          setState(() {
+                            arabicFontSize = 28;
+                            mushufFontSize = 40;
+                          });
+                          saveSetting();
+                        },
+                        child: const Text('Reset'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          saveSetting();
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text('Save'),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

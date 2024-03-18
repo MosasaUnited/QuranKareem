@@ -9,7 +9,6 @@ import '../../../../../core/constants/constant.dart';
 final ItemScrollController itemScrollController = ItemScrollController();
 final ItemPositionsListener itemPositionsListener =
     ItemPositionsListener.create();
-bool fabIsClicked = true;
 
 final class SurahBuilder extends StatefulWidget {
   final sura;
