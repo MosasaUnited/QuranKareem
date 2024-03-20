@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quraan_app/core/constants/app_router.dart';
@@ -13,10 +14,20 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
+  late AudioPlayer _audioPlayer;
+
   @override
   void initState() {
     super.initState();
+    _audioPlayer = AudioPlayer(); // Initialize audio player
+    _playSplashAudio();
     navigateToHome();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _audioPlayer.dispose(); // Release audio player resources
   }
 
   @override
@@ -48,5 +59,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     Future.delayed(const Duration(seconds: 4), () {
       GoRouter.of(context).push(AppRouter.kHomeView);
     });
+  }
+
+  void _playSplashAudio() async {
+    await _audioPlayer.play(AssetSource('audio/basmallah.mp3'));
   }
 }

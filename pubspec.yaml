@@ -72,6 +72,7 @@ flutter:
      - assets/icons/
      - assets/fonts/
      - assets/json/
+     - assets/audio/
   fonts:
     - family: quran
       fonts:
