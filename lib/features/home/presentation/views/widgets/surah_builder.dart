@@ -210,8 +210,10 @@ class _SurahBuilderState extends State<SurahBuilder> {
                 });
               },
               icon: Icon(
-                isActive ? Icons.toggle_on_outlined : Icons.toggle_off_outlined,
-                size: 40,
+                !isActive
+                    ? Icons.open_in_full_outlined
+                    : Icons.close_fullscreen,
+                size: 30,
                 color: Colors.white70,
                 weight: 70,
               ),
