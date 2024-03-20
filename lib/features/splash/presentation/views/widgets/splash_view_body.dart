@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:quraan_app/core/constants/app_router.dart';
 import 'package:quraan_app/core/utils/assets.dart';
+
+import '../../../../../core/constants/custom_colors.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -21,19 +22,20 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff1C2834),
+      backgroundColor: CustomColors.splashBackgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Image.asset(AssetsData.logo),
-          Center(
+          const Center(
             child: Text(
               'القرآن الكريم',
-              style: GoogleFonts.notoKufiArabic().copyWith(
+              style: TextStyle(
+                fontFamily: 'me_quran',
+                fontWeight: FontWeight.w900,
                 color: Colors.green,
                 fontSize: 60,
-                fontWeight: FontWeight.w900,
               ),
             ),
           )
