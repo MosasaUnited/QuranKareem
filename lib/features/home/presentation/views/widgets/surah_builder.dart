@@ -225,10 +225,10 @@ class _SurahBuilderState extends State<SurahBuilder> {
             widget.suraName,
             textAlign: TextAlign.center,
             style: const TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
+                fontSize: 35,
+                fontWeight: FontWeight.w400,
                 color: Colors.white,
-                fontFamily: 'quran',
+                fontFamily: 'me_quran',
                 shadows: [
                   Shadow(
                     offset: Offset(1, 1),
@@ -239,7 +239,18 @@ class _SurahBuilderState extends State<SurahBuilder> {
           ),
           backgroundColor: CustomColors.appColor,
         ),
-        body: SingleSuraBuilder(lengthOfSura),
+        body: Container(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color:
+                      Colors.grey.withOpacity(0.5), // Adjust color and opacity
+                  offset: const Offset(0, 4.0), // Adjust shadow position
+                  blurRadius: 4.0, // Adjust blur radius
+                ),
+              ],
+            ),
+            child: SingleSuraBuilder(lengthOfSura)),
       ),
     );
   }

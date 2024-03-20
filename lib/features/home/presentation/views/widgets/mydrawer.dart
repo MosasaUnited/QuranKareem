@@ -27,8 +27,8 @@ class MyDrawer extends StatelessWidget {
                   height: 80,
                 ),
                 const Text(
-                  'Al Quran Al Kareem',
-                  style: TextStyle(fontSize: 20),
+                  'القرآن الكريم',
+                  style: TextStyle(fontSize: 20, fontFamily: 'me_quran'),
                 ),
               ],
             ),

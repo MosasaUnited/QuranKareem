@@ -43,9 +43,9 @@ class _IndexPageState extends State<IndexPage> {
         title: const Text(
           "القرآن الكريم",
           style: TextStyle(
-              //fontFamily: 'quran',
+              fontFamily: 'me_quran',
               fontSize: 35,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w600,
               shadows: [
                 Shadow(
                   offset: Offset(1, 1),

@@ -7,7 +7,7 @@ class ReturnBasmala extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Text(
       'بسم الله الرحمن الرحيم',
-      style: TextStyle(fontFamily: 'quran', fontSize: 30),
+      style: TextStyle(fontFamily: 'me_quran', fontSize: 30),
       textDirection: TextDirection.rtl,
     );
   }
