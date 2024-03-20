@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../core/constants/ayat_numbers.dart';
 import '../../../../../core/constants/constant.dart';
+import '../../../../../core/constants/custom_colors.dart';
 
 final ItemScrollController itemScrollController = ItemScrollController();
 final ItemPositionsListener itemPositionsListener =
@@ -62,7 +63,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                 style: TextStyle(
                   fontSize: arabicFontSize,
                   fontFamily: arabicFonts,
-                  color: const Color.fromARGB(196, 0, 0, 0),
+                  color: CustomColors.ayaTextColor,
                 ),
               ),
               const Column(
@@ -92,7 +93,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
 
     return SafeArea(
       child: Container(
-        color: const Color.fromARGB(255, 253, 251, 240),
+        color: CustomColors.suraBackColor1,
         child: view
             ? ScrollablePositionedList.builder(
                 itemBuilder: (BuildContext context, int index) {
@@ -103,8 +104,8 @@ class _SurahBuilderState extends State<SurahBuilder> {
                           : const ReturnBasmala(),
                       Container(
                         color: index % 2 != 0
-                            ? const Color.fromARGB(255, 253, 251, 240)
-                            : const Color.fromARGB(255, 253, 247, 230),
+                            ? CustomColors.suraBackColor1
+                            : CustomColors.suraBackColor2,
                         child: PopupMenuButton(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -119,8 +120,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                                       children: [
                                         Icon(
                                           Icons.bookmark_add,
-                                          color:
-                                              Color.fromARGB(255, 56, 115, 59),
+                                          color: CustomColors.appColor,
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -136,8 +136,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                                       children: [
                                         Icon(
                                           Icons.share,
-                                          color:
-                                              Color.fromARGB(255, 56, 115, 59),
+                                          color: CustomColors.appColor,
                                         ),
                                         SizedBox(
                                           width: 10,
@@ -175,7 +174,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                                 style: TextStyle(
                                   fontSize: mushufFontSize,
                                   fontFamily: arabicFonts,
-                                  color: const Color.fromARGB(196, 44, 44, 44),
+                                  color: CustomColors.basmalaTextColor,
                                 ),
                               ),
                             ),
@@ -195,6 +194,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
     int lengthOfSura = numberOfVerses[widget.sura];
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.yellow),
       home: Scaffold(
         appBar: AppBar(
@@ -226,11 +226,11 @@ class _SurahBuilderState extends State<SurahBuilder> {
                   Shadow(
                     offset: Offset(1, 1),
                     blurRadius: 2.0,
-                    color: Color.fromARGB(255, 0, 0, 0),
+                    color: CustomColors.ayaTextColor,
                   ),
                 ]),
           ),
-          backgroundColor: const Color.fromARGB(255, 56, 115, 59),
+          backgroundColor: CustomColors.appColor,
         ),
         body: SingleSuraBuilder(lengthOfSura),
       ),

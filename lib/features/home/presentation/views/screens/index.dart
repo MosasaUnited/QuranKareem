@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quraan_app/core/constants/custom_colors.dart';
 
 import '../../../../../core/constants/constant.dart';
 import '../../../../../core/constants/sura_name.dart';
@@ -40,8 +41,7 @@ class _IndexPageState extends State<IndexPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          //"القرآن",
-          "Quran",
+          "القرآن الكريم",
           style: TextStyle(
               //fontFamily: 'quran',
               fontSize: 35,
@@ -54,7 +54,7 @@ class _IndexPageState extends State<IndexPage> {
                 ),
               ]),
         ),
-        backgroundColor: const Color.fromARGB(255, 56, 115, 59),
+        backgroundColor: CustomColors.appColor,
       ),
       body: FutureBuilder(
         future: readJson(),
