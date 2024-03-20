@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quraan_app/core/constants/app_router.dart';
 import 'package:quraan_app/core/utils/assets.dart';
 
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
+
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody> {
+  @override
+  void initState() {
+    super.initState();
+    navigateToHome();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,5 +40,11 @@ class SplashViewBody extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
   }
 }
