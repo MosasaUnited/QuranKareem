@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quraan_app/core/constants/constant.dart';
 
 import 'core/constants/app_router.dart';
+import 'core/constants/custom_colors.dart';
 import 'core/constants/sura_name.dart';
 
 void main() {
@@ -32,7 +33,7 @@ class _QuranKareemState extends State<QuranKareem> {
       debugShowCheckedModeBanner: false,
       title: 'Quran App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: CustomColors.appColor),
         useMaterial3: false,
       ),
       routerConfig: AppRouter.router,
