@@ -77,7 +77,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
     );
   }
 
-  SafeArea SingleSuraBuilder(LenghtOfSura) {
+  SafeArea SingleSuraBuilder(lengthOfSura) {
     String fullSura = '';
     int previousVerses = 0;
     if (widget.sura + 1 != 1) {
@@ -87,7 +87,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
     }
 
     if (!view)
-      for (int i = 0; i < LenghtOfSura; i++) {
+      for (int i = 0; i < lengthOfSura; i++) {
         fullSura += (widget.arabic[i + previousVerses]['aya_text']);
       }
 
@@ -152,7 +152,7 @@ class _SurahBuilderState extends State<SurahBuilder> {
                 },
                 itemScrollController: itemScrollController,
                 itemPositionsListener: itemPositionsListener,
-                itemCount: LenghtOfSura,
+                itemCount: lengthOfSura,
               )
             : ListView(
                 children: [
@@ -189,6 +189,8 @@ class _SurahBuilderState extends State<SurahBuilder> {
     );
   }
 
+  bool isActive = false;
+
   @override
   Widget build(BuildContext context) {
     int lengthOfSura = numberOfVerses[widget.sura];
@@ -200,16 +202,19 @@ class _SurahBuilderState extends State<SurahBuilder> {
         appBar: AppBar(
           leading: Tooltip(
             message: 'Mushaf Mode',
-            child: TextButton(
-              child: const Icon(
-                Icons.chrome_reader_mode,
-                color: Colors.white,
-              ),
+            child: IconButton(
               onPressed: () {
                 setState(() {
                   view = !view;
+                  isActive = !isActive;
                 });
               },
+              icon: Icon(
+                isActive ? Icons.toggle_on_outlined : Icons.toggle_off_outlined,
+                size: 40,
+                color: Colors.white70,
+                weight: 70,
+              ),
             ),
           ),
           centerTitle: true,

@@ -6,5 +6,7 @@ class CustomColors {
   static const Color suraBackColor2 = Color.fromARGB(255, 253, 247, 230);
   static const Color arabicFontColor = Color.fromARGB(196, 44, 44, 44);
   static const Color ayaTextColor = Color.fromARGB(196, 0, 0, 0);
+  static const Color ayaTextBoldColor = Color.fromARGB(255, 0, 0, 0);
   static const Color basmalaTextColor = Color.fromARGB(196, 44, 44, 44);
+  static const Color someWhatGreyColor = Color.fromARGB(255, 130, 130, 130);
 }

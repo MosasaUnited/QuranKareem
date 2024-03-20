@@ -21,7 +21,7 @@ class _IndexPageState extends State<IndexPage> {
       drawer: const MyDrawer(),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Go to bookmark',
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: CustomColors.appColor,
         onPressed: () async {
           fabIsClicked = true;
           if (await readBookmark() == true) {
@@ -50,7 +50,7 @@ class _IndexPageState extends State<IndexPage> {
                 Shadow(
                   offset: Offset(1, 1),
                   blurRadius: 2.0,
-                  color: Color.fromARGB(255, 0, 0, 0),
+                  color: CustomColors.ayaTextBoldColor,
                 ),
               ]),
         ),
@@ -82,14 +82,14 @@ class _IndexPageState extends State<IndexPage> {
 
   Container indexCreator(quran, context) {
     return Container(
-      color: const Color.fromARGB(255, 221, 250, 236),
+      color: CustomColors.suraBackColor1,
       child: ListView(
         children: [
           for (int i = 0; i < 114; i++)
             Container(
               color: i % 2 == 0
-                  ? const Color.fromARGB(255, 253, 247, 230)
-                  : const Color.fromARGB(255, 253, 251, 240),
+                  ? CustomColors.suraBackColor1
+                  : CustomColors.suraBackColor2,
               child: TextButton(
                 child: Row(
                   children: [
@@ -115,7 +115,7 @@ class _IndexPageState extends State<IndexPage> {
                             Shadow(
                               offset: Offset(.5, .5),
                               blurRadius: 1.0,
-                              color: Color.fromARGB(255, 130, 130, 130),
+                              color: CustomColors.someWhatGreyColor,
                             )
                           ]),
                       textDirection: TextDirection.rtl,
