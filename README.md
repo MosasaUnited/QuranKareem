@@ -9,13 +9,13 @@ This is a mobile application for reading the Holy Quran offline.
 
 **Screenshots:**
 
-* Splash Screen (Alt text: App launch screen) ![image](images/1.jpeg)
-* Index Screen (Alt text: App home screen) ![image](images/2.jpeg)
-* Navigation Drawer (Alt text: Menu for accessing app features) ![image](images/3.jpeg)
-* Surah List Screen (Alt text: List of Quran chapters) ![image](images/4.jpeg)
-* Full Surah View (Alt text: View of a single Quran chapter) ![image](images/5.jpeg)
-* (Add alt text for remaining screenshots) ![image](images/6.jpeg)
-* Quran Settings (Alt text: Settings screen for the Quran app) ![image](images/7.jpeg)
+* ![image](images/1.jpeg) Splash Screen (Alt text: App launch screen) 
+* ![image](images/2.jpeg) Index Screen (Alt text: App home screen) 
+* ![image](images/3.jpeg) Navigation Drawer (Alt text: Menu for accessing app features) 
+* ![image](images/4.jpeg) Surah List Screen (Alt text: List of Quran chapters) 
+* ![image](images/5.jpeg) Full Surah View (Alt text: View of a single Quran chapter) 
+* ![image](images/6.jpeg) (Add alt text for remaining screenshots) 
+* ![image](images/7.jpeg) Quran Settings (Alt text: Settings screen for the Quran app) 
 
 
 
