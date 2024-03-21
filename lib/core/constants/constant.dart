@@ -14,7 +14,7 @@ String arabicFonts = 'quran';
 double arabicFontSize = 28;
 double mushufFontSize = 40;
 
-Uri quranAppUrl = Uri.parse('https://github.com/MosasaUnited');
+Uri quranAppUrl = Uri.parse('https://github.com/MosasaUnited/QuranKareem');
 
 Future saveSetting() async {
   final prefs = await SharedPreferences.getInstance();
