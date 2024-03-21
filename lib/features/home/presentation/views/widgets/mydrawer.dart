@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../../../core/constants/app_router.dart';
 import '../../../../../core/constants/constant.dart';
-import '../../../../settings/presentation/views/screens/settings.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({
@@ -42,8 +43,7 @@ class MyDrawer extends StatelessWidget {
             ),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Settings()));
+              GoRouter.of(context).push(AppRouter.kSettingsView);
             },
           ),
           ListTile(
@@ -55,7 +55,7 @@ class MyDrawer extends StatelessWidget {
             ),
             onTap: () {
               Share.share('''*Quran app*\n
-              u can develop it from my github github.com/MosasaUnited ''');
+              You Can Read the Code from my github https://github.com/MosasaUnited/QuranKareem ''');
               Navigator.pop(context);
             },
           ),
