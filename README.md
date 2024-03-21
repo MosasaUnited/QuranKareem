@@ -30,4 +30,3 @@ This is a mobile application for reading the Holy Quran offline.
 
 **Feel free to contribute to this project!**
 
-**(Add instructions on how to contribute if applicable)**
