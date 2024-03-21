@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:quraan_app/core/constants/custom_colors.dart';
 
+import '../../../../../core/constants/app_router.dart';
 import '../../../../../core/constants/constant.dart';
 import '../../../../../core/constants/sura_name.dart';
 import '../widgets/arabic_sura_number.dart';
@@ -25,15 +27,7 @@ class _IndexPageState extends State<IndexPage> {
         onPressed: () async {
           fabIsClicked = true;
           if (await readBookmark() == true) {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => SurahBuilder(
-                          arabic: quran[0],
-                          sura: bookmarkedSura - 1,
-                          suraName: arabicName[bookmarkedSura - 1]['name'],
-                          ayah: bookmarkedAyah,
-                        )));
+            GoRouter.of(context).push(AppRouter.kSurahBuilderView);
           }
         },
         child: const Icon(Icons.bookmark),
