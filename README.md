@@ -9,7 +9,7 @@ This is a mobile application for reading the Holy Quran offline.
 
 **Screenshots:**
 
-* Splash Screen (Alt text: App launch screen) (https://github.com/MosasaUnited/QuranKareem/blob/main/images/1.jpeg)
+* Splash Screen (Alt text: App launch screen) [image](https://github.com/MosasaUnited/QuranKareem/blob/main/images/1.jpeg)
 * Index Screen (Alt text: App home screen)
 * Navigation Drawer (Alt text: Menu for accessing app features)
 * Surah List Screen (Alt text: List of Quran chapters)
