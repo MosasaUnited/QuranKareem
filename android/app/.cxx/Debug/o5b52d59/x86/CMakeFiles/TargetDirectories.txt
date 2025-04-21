@@ -1,0 +1,2 @@
+C:/Users/mosta/StudioProjects/quraan_app/android/app/.cxx/Debug/o5b52d59/x86/CMakeFiles/edit_cache.dir
+C:/Users/mosta/StudioProjects/quraan_app/android/app/.cxx/Debug/o5b52d59/x86/CMakeFiles/rebuild_cache.dir
